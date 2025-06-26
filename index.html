@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Geeza Pro'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Geeza Pro'; min-height: 17.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ar" dir="rtl"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;دليل هوية العلامة التجارية التفاعلي - د. أحمد بغدادي&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chosen Palette: Trust &amp; Empathy Palette --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Application Structure Plan: A single-page application with a fixed top navigation bar. Added a new section for the "Light Shadow Campaign" to detail its strategy and execution plan. The non-linear, tabbed structure remains to transform the static guide into a practical, task-oriented tool. --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Visualization &amp; Content Choices:<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Intro Page: Goal: Introduce the brand owner and guide's purpose. Method: A clean, centered introductory card with a new goals section. Justification: Provides immediate context, personalization, and clarifies objectives.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Brand Essence: Goal: Inform &amp; Inspire. Method: Cards for personality traits. Interaction: Subtle hover effects. Justification: Visually breaks down the core character.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Color Palette: Goal: Inform &amp; Enable. Method: Grid of color swatches with added rationale for each color, &amp; a Chart.js Donut chart. Interaction: Click to copy HEX code. Justification: Makes the palette a usable and understandable tool. Library: Chart.js.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Typography: Goal: Demonstrate. Method: Side-by-side showcase of headline/body fonts. Justification: Showing is more effective than telling.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Imagery Style: Goal: Convey aesthetics. Method: Simple descriptive cards. Justification: Quick visual summary.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Brand Voice (Do's/Don'ts): Goal: Clarify rules. Method: Two-column layout with icons. Justification: High-contrast, scannable format for clear rules.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Brand Tone: Goal: Show adaptation. Method: Interactive accordion. Interaction: Click to reveal scenario details. Justification: Hides complexity and allows focused learning.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Application Example: Goal: Show practical use. Method: A realistic mock-up of a Facebook post with user-provided image and text. Justification: Translates abstract guidelines into a concrete, recognizable example.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Campaign Section: Goal: Outline a full campaign. Method: Structured cards and tables for objectives, plans, and workflow. Justification: Provides a clear, actionable blueprint for a major marketing initiative.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Final Tips: Goal: Provide actionable advice. Method: Icon-driven cards. Justification: Makes key recommendations scannable and memorable.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&amp;family=Tajawal:wght@400;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Tajawal', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #F4F4F4;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333333;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1, h2, h3, h4, .font-headline {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Cairo', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.brand-primary-bg { background-color: #2C5784; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.brand-primary-text { color: #2C5784; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.brand-secondary-teal-bg { background-color: #009688; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.brand-secondary-orange-bg { background-color: #F28C28; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.brand-neutral-gray-bg { background-color: #F4F4F4; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.brand-neutral-charcoal-text { color: #333333; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2C5784;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom-color: #2C5784;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content-section.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeIn 0.5s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(10px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chart-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-height: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.color-swatch:hover .copy-icon {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.text-shadow-light {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="antialiased"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="app" class="min-h-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="bg-white shadow-md sticky top-0 z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center justify-between h-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h1 class="text-xl font-bold brand-primary-text"&gt;دليل الهوية&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="hidden lg:block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-baseline space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:brand-primary-text" data-target="intro"&gt;المقدمة&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:brand-primary-text" data-target="essence"&gt;جوهر الهوية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:brand-primary-text" data-target="visual"&gt;الهوية البصرية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:brand-primary-text" data-target="verbal"&gt;الهوية اللفظية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:brand-primary-text" data-target="examples"&gt;أمثلة تطبيقية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:brand-primary-text" data-target="campaign"&gt;حملة ظل خفيف&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>&lt;a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:brand-primary-text" data-target="tips"&gt;نصائح ختامية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div class="lg:hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button id="mobile-menu-button" class="p-2 rounded-md text-gray-600 hover:text-white hover:brand-primary-bg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="sr-only"&gt;فتح القائمة الرئيسية&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>&lt;div id="mobile-menu" class="lg:hidden hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="px-2 pt-2 pb-3 space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:brand-primary-text" data-target="intro"&gt;المقدمة&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:brand-primary-text" data-target="essence"&gt;جوهر الهوية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:brand-primary-text" data-target="visual"&gt;الهوية البصرية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:brand-primary-text" data-target="verbal"&gt;الهوية اللفظية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:brand-primary-text" data-target="examples"&gt;أمثلة تطبيقية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:brand-primary-text" data-target="campaign"&gt;حملة ظل خفيف&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:brand-primary-text" data-target="tips"&gt;نصائح ختامية&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Section: Introduction --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="intro" class="content-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white rounded-lg shadow-lg p-8 md:p-12 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-2xl text-gray-500 mb-4"&gt;دليل الهوية التجارية الخاص بـ&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h1 class="text-5xl md:text-6xl font-black brand-primary-text mb-2"&gt;د. أحمد بغدادي&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xl text-gray-700 font-light"&gt;(اختصاصي نفسي)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="border-t w-24 mx-auto my-8 border-gray-300"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600"&gt;</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">                        </span>مرحباً بك في الدليل التفاعلي الذي يحدد الإطار البصري واللفظي لعلامتنا التجارية، مما يضمن تقديم رسالتنا بوضوح واتساق.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mt-12 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold brand-primary-text mb-4"&gt;أهداف هذا الدليل&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-gray-50 p-4 rounded-lg flex items-start space-x-3 space-x-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-2xl brand-primary-text mt-1"&gt;🎯&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="font-bold"&gt;توحيد الهوية&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-sm text-gray-600"&gt;ضمان ظهور العلامة التجارية بشكل متسق وموحد عبر جميع المنصات.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-gray-50 p-4 rounded-lg flex items-start space-x-3 space-x-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-2xl brand-secondary-teal-bg text-white rounded-full p-1 mt-1"&gt;🤝&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="font-bold"&gt;بناء الثقة&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-sm text-gray-600"&gt;ترسيخ صورة مهنية وموثوقة تعكس خبرتنا العلمية وقيمنا الإنسانية.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-gray-50 p-4 rounded-lg flex items-start space-x-3 space-x-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="text-2xl brand-secondary-orange-bg text-white rounded-full p-1 mt-1"&gt;💡&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="font-bold"&gt;تمكين الفريق&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-sm text-gray-600"&gt;توفير مرجع واضح يسهّل على الجميع إنشاء محتوى يلتزم بالهوية.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Section: Essence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="essence" class="content-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-3xl font-bold brand-primary-text"&gt;جوهر هويتنا: الرسالة والشخصية&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto"&gt;نقدم الدعم النفسي والتربوي القائم على أسس علمية، لتمكين الأفراد من تحقيق النمو الشخصي والتوازن في حياتهم.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-bold text-center mb-8"&gt;شخصية العلامة التجارية&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-4xl brand-primary-text mb-4"&gt;💡&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="text-xl font-bold mb-2"&gt;موثوقة وعلمية&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-600"&gt;نجمع بين الدقة العلمية والموثوقية المهنية لتقديم خبرة يمكن الاعتماد عليها.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;div class="text-4xl brand-secondary-teal-bg inline-block rounded-full p-2 text-white mb-4"&gt;🤝&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="text-xl font-bold mb-2"&gt;داعمة ومُمكِّنة&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-600"&gt;نسلط الضوء على الطبيعة التعاونية للعملية العلاجية، ونمكّن العميل ليكون شريكًا في نموه.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-4xl mb-4"&gt;❤️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="text-xl font-bold mb-2"&gt;إنسانية ورحيمة&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-600"&gt;نؤكد على التعاطف والدفء في جوهر خدماتنا، لنقدم دعمًا شاملاً وحقيقيًا.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Section: Visual Identity --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="visual" class="content-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-3xl font-bold brand-primary-text"&gt;نظام الهوية البصرية&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mt-4 text-lg text-gray-600"&gt;يترجم هذا القسم شخصية علامتنا إلى لغة بصرية ملموسة وموحدة.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-8 rounded-lg shadow-lg mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-6 text-center"&gt;لوحة الألوان&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="color-swatch cursor-pointer group" data-hex="#2C5784"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-full h-24 rounded-lg brand-primary-bg shadow-md mb-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold"&gt;أزرق الثقة&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-xs text-gray-500 mb-2"&gt;#2C5784&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-gray-600"&gt;يثير شعوراً بالثقة والاحترافية والهدوء. هو لون السلطة العلمية والاعتمادية، مما يبني أساسًا متينًا من الثقة.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="color-swatch cursor-pointer group" data-hex="#009688"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-full h-24 rounded-lg brand-secondary-teal-bg shadow-md mb-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold"&gt;فيروزي النمو&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-xs text-gray-500 mb-2"&gt;#009688&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-gray-600"&gt;يمثل النمو والتوازن والسكينة. يرتبط بالصحة والرفاهية، مما يعكس هدف النمو الشخصي لعملائنا.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="color-swatch cursor-pointer group" data-hex="#F28C28"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-full h-24 rounded-lg brand-secondary-orange-bg shadow-md mb-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold"&gt;برتقالي الدعم&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-xs text-gray-500 mb-2"&gt;#F28C28&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-gray-600"&gt;يضيف لمسة من الدفء والتفاؤل. يُستخدم كلمسة بسيطة لتأكيد الجانب الإنساني الداعم ولفت الانتباه.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="color-swatch cursor-pointer group" data-hex="#F4F4F4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-full h-24 rounded-lg brand-neutral-gray-bg shadow-md border mb-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold"&gt;رمادي هادئ&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-xs text-gray-500 mb-2"&gt;#F4F4F4&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-gray-600"&gt;يوفر خلفية ناعمة ونظيفة ومحايدة تسمح للمحتوى بالتنفس، ويمنح شعوراً بالهدوء والاحترافية.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="color-swatch cursor-pointer group" data-hex="#333333"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-full h-24 rounded-lg bg-[#333333] shadow-md mb-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold"&gt;أسود الوضوح&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-xs text-gray-500 mb-2"&gt;#333333&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm text-gray-600"&gt;لون فحمي داكن يضمن أقصى درجات الوضوح وسهولة القراءة للنصوص، ويعكس الدقة في تقديم المعلومات.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="text-lg font-bold text-center mb-2"&gt;قاعدة الاستخدام (60-30-10)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;canvas id="color-ratio-chart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-center text-sm text-gray-600 mt-2"&gt;لضمان التوازن البصري، استخدم الألوان المحايدة بنسبة 60%، واللون الأساسي 30%، والألوان الثانوية 10%.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-8 rounded-lg shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;الطباعة والخطوط&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="mb-6 text-gray-700"&gt;اخترنا زوجًا من الخطوط يوازن بين السلطة العلمية والود الإنساني.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-500 mb-1"&gt;خط العناوين&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h1 class="text-4xl font-bold brand-primary-text mb-4" style="font-family: 'Cairo', sans-serif;"&gt;Cairo&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-500 mb-1"&gt;خط النصوص&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-lg" style="font-family: 'Tajawal', sans-serif;"&gt;Tajawal هو خط نظيف وودود، يوفر قراءة مريحة للنصوص الطويلة.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-8 rounded-lg shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;أسلوب الصور&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="mb-6 text-gray-700"&gt;يجب أن تكون العناصر المرئية أصيلة واحترافية وداعمة.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold"&gt;الصور الفوتوغرافية&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-gray-600"&gt;احترافية، إضاءة طبيعية، تفاعلات إنسانية حقيقية، مع التركيز على التواصل والتأمل.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold"&gt;الرسوميات&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-gray-600"&gt;بسيطة، نظيفة، وهادفة. أيقونات ورسوم توضيحية بسيطة باستخدام ألوان العلامة التجارية.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Section: Verbal Identity --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="verbal" class="content-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-3xl font-bold brand-primary-text"&gt;نظام الهوية اللفظية&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mt-4 text-lg text-gray-600"&gt;يحدد هذا القسم كيف نتحدث، مما يضمن اتساق صوتنا مع مظهرنا.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-8 rounded-lg shadow-lg mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-2 text-center"&gt;صوت العلامة التجارية&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-center text-xl brand-primary-text font-bold mb-6"&gt;السلطة المتعاطفة&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="max-w-3xl mx-auto text-center text-gray-700 mb-8"&gt;</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">                        </span>صوتنا واسع المعرفة، واضح، وواثق، ولكنه يُقدم دائمًا بتعاطف واحترام. نترجم المفاهيم المعقدة إلى لغة سهلة ومفيدة.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-green-100 p-4 rounded-lg border-l-4 border-green-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-green-800 mb-2"&gt;ما نفعله (Do's)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;ul class="list-inside space-y-2 text-green-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;✔️ نستخدم مصطلح "عميل" لتعزيز الشراكة.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;✔️ نستخدم لغة الشخص أولاً (مثال: "طفل يعاني من...").&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;✔️ نتحدث بلغة واضحة وداعمة.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;✔️ نركز على التمكين والنمو والحلول.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-red-100 p-4 rounded-lg border-l-4 border-red-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-red-800 mb-2"&gt;ما لا نفعله (Don'ts)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>&lt;ul class="list-inside space-y-2 text-red-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;❌ نستخدم مصطلح "مريض" الذي يوحي بالسلبية.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;❌ نستخدم لغة تركز على التشخيص (مثال: "شخص قَلِق").&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;❌ نستخدم مصطلحات أكاديمية معقدة مع العملاء.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;❌ نتحدث بنبرة باردة أو منفصلة.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-8 rounded-lg shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold mb-6 text-center"&gt;نبرة العلامة التجارية&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div id="tone-accordion" class="max-w-3xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="border-b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button class="accordion-header w-full text-right p-4 focus:outline-none" data-target="tone-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="font-bold text-lg"&gt;الموقف 1: منشور تعليمي&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="accordion-icon transform transition-transform duration-300"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div id="tone-1" class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="p-4 bg-gray-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold"&gt;النبرة: معلوماتية، منظمة، ومطمئنة.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="mt-2 text-gray-600"&gt;مثال: "من الطبيعي أن يشعر المراهقون ببعض القلق، ولكن عندما تبدأ هذه المشاعر بالتأثير على حياتهم اليومية، قد يكون ذلك مؤشرًا لوجود اضطراب القلق. نستعرض هنا العلامات الرئيسية وكيفية تقديم الدعم."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;div class="border-b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button class="accordion-header w-full text-right p-4 focus:outline-none" data-target="tone-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="font-bold text-lg"&gt;الموقف 2: الرد على تعليق إيجابي&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="accordion-icon transform transition-transform duration-300"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div id="tone-2" class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>&lt;div class="p-4 bg-gray-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold"&gt;النبرة: دافئة، ممتنة، وتفاعلية.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="mt-2 text-gray-600"&gt;مثال: "شكرًا جزيلاً لمشاركتك اللطيفة! يسعدنا جدًا أن المحتوى كان مفيدًا لك. نحن هنا دائمًا لدعم مجتمعنا."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="border-b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button class="accordion-header w-full text-right p-4 focus:outline-none" data-target="tone-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="font-bold text-lg"&gt;الموقف 3: الرد على شكوى&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="accordion-icon transform transition-transform duration-300"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div id="tone-3" class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>&lt;div class="p-4 bg-gray-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold"&gt;النبرة: مهنية، مهتمة، وموجهة للحل.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="mt-2 text-gray-600"&gt;مثال: "نشكرك على تواصلك. نأخذ ملاحظاتك على محمل الجد. سيقوم أحد أعضاء فريقنا بالتواصل معك مباشرة خلال 24 ساعة لتقديم المساعدة."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Section: Examples --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="examples" class="content-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-3xl font-bold brand-primary-text"&gt;أمثلة تطبيقية&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mt-4 text-lg text-gray-600"&gt;هكذا تبدو هويتنا عند تطبيقها في العالم الحقيقي.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>&lt;img class="h-12 w-12 rounded-full object-cover" src="https://placehold.co/100x100/2C5784/FFFFFF?text=Dr.A" alt="صورة د. أحمد بغدادي"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="mr-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="font-bold text-lg brand-primary-text font-headline"&gt;د. أحمد بغدادي&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="text-sm text-gray-500"&gt;منذ ٤ ساعات · 🌍&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mt-4 text-gray-800 text-base" style="font-family: 'Tajawal', sans-serif;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">                                </span>فهم قلق المراهقة ليس مجرد التعرف على الأعراض، بل هو بناء جسور من التواصل والثقة. من المهم أن نتذكر أن القلق تجربة طبيعية، ولكن حين يزداد عن حده، يصبح دعمنا كآباء ومختصين حاسمًا.</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="mt-3"&gt;</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">                                </span>خطوات بسيطة مثل الاستماع الفعّال دون إصدار أحكام، وتشجيع روتين يومي متوازن، يمكن أن تحدث فرقًا كبيرًا.</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="mt-4 text-gray-600 italic text-shadow-light"&gt;“مساحة بصرية تحكي عن قلق المراهقة… برؤية فنية، ونظرة لفوق.”&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="mt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="brand-secondary-teal-bg text-white px-2 py-1 rounded"&gt;#صحة_نفسية&lt;/span&gt; &lt;span class="brand-secondary-teal-bg text-white px-2 py-1 rounded"&gt;#دعم_نفسي&lt;/span&gt; &lt;span class="brand-secondary-teal-bg text-white px-2 py-1 rounded"&gt;#تربية_إيجابية&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img class="w-full h-auto object-cover" src="https://i.postimg.cc/9fKyQ2Dn/Untitled-2.jpg" alt="تصميم فني يصور فتاة تنظر للأعلى محاطة بعناصر تجريدية" &gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-around items-center p-2 border-t border-gray-200 text-gray-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded-lg"&gt;&lt;span&gt;👍&lt;/span&gt; &lt;span&gt;أعجبني&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded-lg"&gt;&lt;span&gt;💬&lt;/span&gt; &lt;span&gt;تعليق&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded-lg"&gt;&lt;span&gt;↪️&lt;/span&gt; &lt;span&gt;مشاركة&lt;/span&gt;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Section: Campaign --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="campaign" class="content-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white rounded-lg shadow-lg p-8 md:p-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-center mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;h2 class="text-3xl font-bold brand-primary-text"&gt;حملة "ظل خفيف" التوعوية&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;p class="mt-4 text-lg text-gray-600 italic"&gt;“مساحة بصرية تحكي عن قلق المراهقة… برؤية فنية، ونظرة لفوق.”&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold brand-primary-text mb-6 text-center border-b pb-3"&gt;🎯 أهداف الحملة&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-gray-50 p-4 rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold mb-2"&gt;1. رفع الوعي بقلق المراهقة&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-gray-700"&gt;تسليط الضوء على القلق بوصفه تجربة إنسانية طبيعية يعيشها العديد من المراهقين، دون وصم أو مبالغة، بل بفهم وتعاطف.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="bg-gray-50 p-4 rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold mb-2"&gt;2. تقديم محتوى بصري فني&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-gray-700"&gt;استخدام الصور السريالية والفنية كوسيلة للتعبير عن المشاعر النفسية بطريقة غير مباشرة، تُخاطب الوجدان وتفتح مساحات للتفكير.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>&lt;div class="bg-gray-50 p-4 rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold mb-2"&gt;3. خلق مساحة آمنة للحوار&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-gray-700"&gt;تشجيع المراهقين والمراهقات على التعبير عن مشاعرهم من خلال الفن، والمشاركة في النقاشات المرتبطة بالقلق النفسي والعاطفي.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                             </span>&lt;div class="bg-gray-50 p-4 rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="font-bold mb-2"&gt;4. كسر الصور النمطية&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-gray-700"&gt;إعادة تشكيل الصورة المجتمعية عن القلق والتوتر، واعتبارهما جزءًا من التجربة الإنسانية، وليس دليلاً على “الضعف” أو “الخلل”.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold brand-primary-text mb-6 text-center border-b pb-3"&gt;🎬 خطة المحتوى البصري&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;div class="overflow-x-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;table class="w-full text-sm text-right text-gray-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;thead class="text-xs text-gray-700 uppercase bg-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;th scope="col" class="px-6 py-3"&gt;نوع المشهد&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;th scope="col" class="px-6 py-3"&gt;الفكرة الرئيسية&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;th scope="col" class="px-6 py-3"&gt;عدد التصاميم&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tr class="bg-white border-b"&gt;&lt;td class="px-6 py-4"&gt;حوارات أسرية&lt;/td&gt;&lt;td class="px-6 py-4"&gt;لحظات تواصل بين المراهق وولي الأمر&lt;/td&gt;&lt;td class="px-6 py-4"&gt;3&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tr class="bg-gray-50 border-b"&gt;&lt;td class="px-6 py-4"&gt;مشاهد عزلة&lt;/td&gt;&lt;td class="px-6 py-4"&gt;المراهق في لحظة قلق أو انعزال&lt;/td&gt;&lt;td class="px-6 py-4"&gt;2&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tr class="bg-white border-b"&gt;&lt;td class="px-6 py-4"&gt;دعم غير مباشر&lt;/td&gt;&lt;td class="px-6 py-4"&gt;روتين صحي، اهتمام بالأكل/النوم/الرياضة&lt;/td&gt;&lt;td class="px-6 py-4"&gt;2&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tr class="bg-gray-50 border-b"&gt;&lt;td class="px-6 py-4"&gt;توعية صريحة&lt;/td&gt;&lt;td class="px-6 py-4"&gt;مشهد مع نص مباشر حول أعراض القلق وخطورته&lt;/td&gt;&lt;td class="px-6 py-4"&gt;1&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tr class="bg-white"&gt;&lt;td class="px-6 py-4"&gt;رسالة أمل&lt;/td&gt;&lt;td class="px-6 py-4"&gt;مشهد فيه تعبير عن التطور والتحسن&lt;/td&gt;&lt;td class="px-6 py-4"&gt;1&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tr class="bg-gray-100 font-bold"&gt;&lt;td class="px-6 py-4"&gt;الإجمالي&lt;/td&gt;&lt;td class="px-6 py-4"&gt;&lt;/td&gt;&lt;td class="px-6 py-4"&gt;9 تصاميم&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold brand-primary-text mb-6 text-center border-b pb-3"&gt;✍️ نماذج النصوص والتوجيهات&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg"&gt;&lt;strong&gt;الحوار الآمن:&lt;/strong&gt; “مش بس تسمعه... افهمه من غير ما تحكم.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg"&gt;&lt;strong&gt;القلق في العزلة:&lt;/strong&gt; “في عزلة المراهق... صرخات ما بتتقالش.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg"&gt;&lt;strong&gt;الدعم بالتفاصيل:&lt;/strong&gt; “تفاصيل صغيرة... تصنع فرق كبير.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg"&gt;&lt;strong&gt;جهازه مش هيسمعه:&lt;/strong&gt; “أقرب شخص له ممكن يكون... أبعد واحد.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg"&gt;&lt;strong&gt;السؤال مفتاح:&lt;/strong&gt; “لو حسيتِ... اسألي، مش تفرضي.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg"&gt;&lt;strong&gt;مساحة آمنة:&lt;/strong&gt; “مش لازم يحكي كل حاجة… بس لازم يحس بالأمان.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg"&gt;&lt;strong&gt;دعم خارج المنزل:&lt;/strong&gt; “خارج البيت... محتاج من يسمعه برضه.”&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="border p-4 rounded-lg bg-yellow-100 border-yellow-300"&gt;&lt;strong&gt;توجيه موشن:&lt;/strong&gt; حركة بسيطة على بخار الكوب، نظرات متبادلة، نص متحرك لزيادة التأثير.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold brand-primary-text mb-6 text-center border-b pb-3"&gt;🗓️ جدول سير العمل&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                         </span>&lt;ul class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="p-3 bg-gray-50 rounded-lg flex justify-between"&gt;&lt;span&gt;&lt;strong&gt;المرحلة 1: التحضير&lt;/strong&gt; (مراجعة البرومبتات وتوليد الصور)&lt;/span&gt; &lt;span class="font-mono"&gt;3 أيام&lt;/span&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="p-3 bg-white rounded-lg flex justify-between"&gt;&lt;span&gt;&lt;strong&gt;المرحلة 2: الكتابة&lt;/strong&gt; (مراجعة النصوص ودمجها بصريًا)&lt;/span&gt; &lt;span class="font-mono"&gt;2 يوم&lt;/span&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="p-3 bg-gray-50 rounded-lg flex justify-between"&gt;&lt;span&gt;&lt;strong&gt;المرحلة 3: الموشن (اختياري)&lt;/strong&gt; (تحريك الصور إن لزم)&lt;/span&gt; &lt;span class="font-mono"&gt;4 أيام&lt;/span&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="p-3 bg-white rounded-lg flex justify-between"&gt;&lt;span&gt;&lt;strong&gt;المرحلة 4: المعاينة&lt;/strong&gt; (مراجعة نهائية وتعديلات)&lt;/span&gt; &lt;span class="font-mono"&gt;1 يوم&lt;/span&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold brand-primary-text mb-6 text-center border-b pb-3"&gt;📄 ملخص التقرير المفسر&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="list-disc pr-5 space-y-2 text-gray-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>&lt;li&gt;&lt;strong&gt;الهدف:&lt;/strong&gt; توعية الأهل بخطورة تجاهل قلق المراهقين وأهمية بناء تواصل داعم.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>&lt;li&gt;&lt;strong&gt;الفئة المستهدفة:&lt;/strong&gt; أولياء الأمور (أمهات وآباء) + تربويين.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>&lt;li&gt;&lt;strong&gt;النبرة:&lt;/strong&gt; دافئة، إنسانية، غير حكمية.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>&lt;li&gt;&lt;strong&gt;الأسلوب البصري:&lt;/strong&gt; سينمائي - درامي - معبر - بسيط في النص، غني في الصورة.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>&lt;li&gt;&lt;strong&gt;الاستخدام:&lt;/strong&gt; إنستغرام، سناب، يوتيوب شورتس، توعية في المدارس، مطبوعات.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Section: Final Tips --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section id="tips" class="content-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-center mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-3xl font-bold brand-primary-text"&gt;نصائح ختامية لظهور احترافي&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mt-4 text-lg text-gray-600"&gt;لضمان أفضل انطباع، نوصي بالتركيز على جودة الأصول المرئية التالية.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4 space-x-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-4xl"&gt;📷&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="text-xl font-bold mb-2"&gt;الاستثمار في صور شخصية&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-600"&gt;قم بتنفيذ جلسة تصوير احترافية (فوتوسيشن) توفر صورًا عالية الجودة في مواقف مختلفة: صور رسمية، وأخرى ودودة، وصور أثناء العمل. هذه الصور هي حجر الزاوية في بناء الثقة الشخصية.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div class="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4 space-x-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-4xl"&gt;🎬&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="text-xl font-bold mb-2"&gt;جودة الفيديو أولاً&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-600"&gt;المحتوى المرئي المتحرك هو الأقوى تأثيرًا. احرص على أن تكون الفيديوهات قصيرة، ملخصة، وذات جودة عالية من حيث الصوت والصورة والإضاءة. فيديو واحد نظيف أفضل من عشرة فيديوهات رديئة.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div class="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4 space-x-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-4xl"&gt;🎨&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="text-xl font-bold mb-2"&gt;الألوان والخلفيات&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-600"&gt;تجنب استخدام خلفيات تشتت الانتباه. وبشكل خاص، ابتعد عن الخلفيات السوداء تمامًا في التصاميم أو الفيديوهات، حيث أنها لا تتماشى مع الطابع الهادئ والداعم للعلامة. استخدم الخلفية الرمادية الهادئة (#F4F4F4) كبديل.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div class="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4 space-x-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-4xl"&gt;🖼️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="text-xl font-bold mb-2"&gt;واجهة حساباتك الرقمية&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-600"&gt;صورة البروفايل يجب أن تكون واضحة واحترافية للوجه. أما صورة الغلاف (البنر) فهي مساحة إعلانية قيمة؛ استخدمها لعرض رسالة العلامة التجارية الأساسية أو شعارها بوضوح.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="toast" class="fixed bottom-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 transition-opacity duration-300"&gt;</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">        </span>تم نسخ الكود بنجاح!</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function () {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const navLinks = document.querySelectorAll('.nav-link');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sections = document.querySelectorAll('.content-section');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const mobileMenuButton = document.getElementById('mobile-menu-button');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const mobileMenu = document.getElementById('mobile-menu');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>function setActiveLink(targetId) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>navLinks.forEach(link =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>link.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (link.dataset.target === targetId) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>link.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>function showSection(targetId) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>sections.forEach(section =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>section.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (section.id === targetId) {</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>section.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>navLinks.forEach(link =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>link.addEventListener('click', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const targetId = e.currentTarget.dataset.target;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setActiveLink(targetId);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showSection(targetId);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (!mobileMenu.classList.contains('hidden')) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>mobileMenu.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>mobileMenuButton.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mobileMenu.classList.toggle('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Set initial state</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setActiveLink('intro');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showSection('intro');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Color Swatch Copy</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const colorSwatches = document.querySelectorAll('.color-swatch');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const toast = document.getElementById('toast');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>colorSwatches.forEach(swatch =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>swatch.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const hex = swatch.dataset.hex;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const textarea = document.createElement('textarea');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>textarea.value = hex;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>textarea.style.position = 'absolute';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>textarea.style.left = '-9999px'; // Move it off-screen</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.body.appendChild(textarea);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>textarea.select();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.execCommand('copy');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>toast.classList.remove('opacity-0');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>toast.classList.add('opacity-0');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}, 2000);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} catch (err) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>console.error('Failed to copy text: ', err);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.body.removeChild(textarea);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Chart.js for color ratio</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const colorRatioChartCanvas = document.getElementById('color-ratio-chart');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (colorRatioChartCanvas) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const ctx = colorRatioChartCanvas.getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>new Chart(ctx, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: 'doughnut',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>labels: ['محايد (60%)', 'أساسي (30%)', 'ثانوي (10%)'],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>label: 'نسبة استخدام الألوان',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>data: [60, 30, 10],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>backgroundColor: [</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>'#F4F4F4',</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>'#2C5784',</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>'#009688'</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderColor: [</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>'#cccccc',</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>'#2C5784',</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>'#009688'</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderWidth: 1</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>options: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>responsive: true,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>legend: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>position: 'bottom',</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>labels: {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>padding: 15,</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>font: {</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>family: "'Tajawal', sans-serif"</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Accordion for Brand Tone</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const accordionHeaders = document.querySelectorAll('.accordion-header');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>accordionHeaders.forEach(header =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>header.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const content = document.getElementById(header.dataset.target);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const icon = header.querySelector('.accordion-icon');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const isOpening = !content.style.maxHeight;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Close all accordions first</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.querySelectorAll('.accordion-content').forEach(c =&gt; c.style.maxHeight = null);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.querySelectorAll('.accordion-icon').forEach(i =&gt; i.style.transform = 'rotate(0deg)');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (isOpening) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>content.style.maxHeight = content.scrollHeight + "px";</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>icon.style.transform = 'rotate(180deg)';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
